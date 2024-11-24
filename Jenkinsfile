@@ -5,15 +5,10 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from source control
-                git branch: 'main', url: 'https://github.com/your-repo/java-maven-project.git'
+                git branch: 'main', url: 'https://github.com/Pranalipokharkar/JenkinsTut.git'
             }
         }
-        stage('Setup Maven') {
-            steps {
-                // Ensure Maven is installed
-                sh 'mvn --version'
-            }
-        }
+       
         stage('Build') {
             steps {
                 // Build the project using Maven
